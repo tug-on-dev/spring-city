@@ -51,3 +51,9 @@ INSERT INTO visits (pet_id, visit_date, description) SELECT 7, '2010-03-04', 'ra
 INSERT INTO visits (pet_id, visit_date, description) SELECT 8, '2011-03-04', 'rabies shot' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=2);
 INSERT INTO visits (pet_id, visit_date, description) SELECT 8, '2009-06-04', 'neutered' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=3);
 INSERT INTO visits (pet_id, visit_date, description) SELECT 7, '2008-09-04', 'spayed' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=4);
+
+INSERT INTO drugs (name, price) SELECT 'Amoxicillin', 25.99 WHERE NOT EXISTS (SELECT * FROM drugs WHERE id=1);
+INSERT INTO drugs (name, price) SELECT 'Carprofen', 45.50 WHERE NOT EXISTS (SELECT * FROM drugs WHERE id=2);
+INSERT INTO drugs (name, price) SELECT 'Doxycycline', 32.00 WHERE NOT EXISTS (SELECT * FROM drugs WHERE id=3);
+INSERT INTO drugs (name, price) SELECT 'Metronidazole', 28.75 WHERE NOT EXISTS (SELECT * FROM drugs WHERE id=4);
+INSERT INTO drugs (name, price) SELECT 'Prednisone', 15.25 WHERE NOT EXISTS (SELECT * FROM drugs WHERE id=5);
